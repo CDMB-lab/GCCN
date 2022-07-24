@@ -9,7 +9,7 @@ numpy==1.21.2 <br>
 networkx==2.6.3 <br>
 torch==1.11.0 <br>
 torch-geometric==2.0.4 <br>
-In addition, CUDA 11.3 have been used on NVIDIA 3080. <br>
+In addition, CUDA 11.3 have been used on NVIDIA GeForce RTX 3080. <br>
 
 ## Overview
 The repository is organised as follows: <br>
