@@ -19,11 +19,11 @@ from torch.nn import functional as F
 from layers import PrimaryCapsuleLayer, DigitalCapsuleLayer, ReconstructionNet
 
 
-class HGCCN(nn.Module):
+class GCCN(nn.Module):
     def __init__(self, num_of_features, num_of_targets, num_prim_caps, num_digit_caps,
                  capsule_dimensions, use_routing, num_iterations, dropout, M, base_ldc,
                  use_residual, use_reconstruction, theta=0.1):
-        super(HGCCN, self).__init__()
+        super(GCCN, self).__init__()
 
         self.num_of_features = num_of_features
         self.num_of_targets = num_of_targets
