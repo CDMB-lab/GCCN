@@ -26,7 +26,7 @@ from torch.optim import Adam
 from torch_geometric.loader import DenseDataLoader
 
 from custom_functions import margin_loss, num_graphs
-from models import HGCCN
+from models import GCCN
 from utils import pickle_dump
 
 
@@ -79,11 +79,11 @@ def cross_validation(args, dataset, num_nodes, num_features, num_targets,
         test_loader = DenseDataLoader(test_dataset, batch_size=batch_size)
         val_loader = DenseDataLoader(val_dataset, batch_size=batch_size)
 
-        model = HGCCN(num_of_features=num_features, num_of_targets=num_targets, num_prim_caps=num_nodes,
-                      num_digit_caps=args.num_capsules, capsule_dimensions=args.capsule_dimension,
-                      use_routing=args.use_routing, num_iterations=args.num_iterations, dropout=args.dropout,
-                      M=args.M, base_ldc=args.base_ldc, use_residual=args.use_residual,
-                      use_reconstruction=args.use_reconstruction, theta=args.theta)
+        model = GCCN(num_of_features=num_features, num_of_targets=num_targets, num_prim_caps=num_nodes,
+                     num_digit_caps=args.num_capsules, capsule_dimensions=args.capsule_dimension,
+                     use_routing=args.use_routing, num_iterations=args.num_iterations, dropout=args.dropout,
+                     M=args.M, base_ldc=args.base_ldc, use_residual=args.use_residual,
+                     use_reconstruction=args.use_reconstruction, theta=args.theta)
 
         optimizer = Adam(model.parameters(), lr=lr, weight_decay=weight_decay)
 
