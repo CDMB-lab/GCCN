@@ -1,5 +1,5 @@
-# HGCCN
-source code of **H**ierarchical **G**raph **C**apsule **C**onvolutional **N**etwork (HGCCN). <br>
+# GCCN
+source code of **G**raph **C**apsule **C**onvolutional **N**etwork (HGCCN). <br>
 The data used in this study can be openly available at http://adni.loni.usc.edu/.
 
 ## Dependencies
