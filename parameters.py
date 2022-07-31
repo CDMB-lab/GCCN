@@ -17,7 +17,7 @@ import argparse
 
 
 def parameter_parser():
-    parser = argparse.ArgumentParser(description='CAPS-GAN')
+    parser = argparse.ArgumentParser(description='GCNN')
     str2bool = lambda x: x.lower() == 'true'
 
     ######## Common ########
